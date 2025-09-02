@@ -9,43 +9,18 @@ let package = Package(
     products: [
         .library(
             name: "ZFPlayer",
-            targets: ["Core", "ControlView", "AVPlayer"]
+            targets: ["ZFPlayer"]
         )
     ],
     targets: [
         .target(
-            name: "Core",
-            path: "ZFPlayer/Classes/Core",
-            exclude: [],
-            sources: nil,
-            resources: [],
-            publicHeadersPath: ".",
-            cSettings: [
-                .headerSearchPath(".")
-            ]
-        ),
-        .target(
-            name: "ControlView",
-            dependencies: ["Core"],
-            path: "ZFPlayer/Classes/ControlView",
-            exclude: [],
-            sources: nil,
+            name: "ZFPlayer",
+            path: "ZFPlayer/Classes",
+            sources: ["Core", "ControlView", "AVPlayer", "ijkplayer"],
             resources: [
-                .process("ZFPlayer.bundle")
+                .process("ControlView/ZFPlayer.bundle") // bundle 资源必须写在 publicHeadersPath 前
             ],
-            publicHeadersPath: ".",
-            cSettings: [
-                .headerSearchPath(".")
-            ]
-        ),
-        .target(
-            name: "AVPlayer",
-            dependencies: ["Core"],
-            path: "ZFPlayer/Classes/AVPlayer",
-            exclude: [],
-            sources: nil,
-            resources: [],
-            publicHeadersPath: ".",
+            publicHeadersPath: "../ZFPlayer/Include", // umbrella header + modulemap
             cSettings: [
                 .headerSearchPath(".")
             ]
