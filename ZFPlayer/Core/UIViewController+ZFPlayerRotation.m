@@ -26,6 +26,8 @@
 #import "ZFLandscapeWindow.h"
 #import "ZFLandscapeRotationManager.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 API_AVAILABLE(ios(13.0)) @implementation UIViewController (ZFPlayerFixSafeArea)
 
 /// Hook
@@ -148,12 +150,14 @@ API_AVAILABLE(ios(13.0)) @implementation UIViewController (ZFPlayerFixSafeArea)
     return [self.topViewController preferredInterfaceOrientationForPresentation];
 }
 
-- (UIViewController *)childViewControllerForStatusBarStyle {
+- (UIViewController * _Nullable)childViewControllerForStatusBarStyle {
     return self.topViewController;
 }
 
-- (UIViewController *)childViewControllerForStatusBarHidden {
+- (UIViewController * _Nullable)childViewControllerForStatusBarHidden {
     return self.topViewController;
 }
 
 @end
+
+NS_ASSUME_NONNULL_END

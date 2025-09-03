@@ -24,7 +24,9 @@
 
 #import <UIKit/UIKit.h>
 
-typedef void (^ZFDownLoadDataCallBack)(NSData *data, NSError *error);
+NS_ASSUME_NONNULL_BEGIN
+
+typedef void (^ZFDownLoadDataCallBack)(NSData *_Nullable data, NSError *_Nullable error);
 typedef void (^ZFDownloadProgressBlock)(unsigned long long total, unsigned long long current);
 
 @interface ZFImageDownloader : NSObject<NSURLSessionDownloadDelegate>
@@ -35,12 +37,12 @@ typedef void (^ZFDownloadProgressBlock)(unsigned long long total, unsigned long 
 @property (nonatomic, assign) unsigned long long totalLength;
 @property (nonatomic, assign) unsigned long long currentLength;
 
-@property (nonatomic, copy) ZFDownloadProgressBlock progressBlock;
-@property (nonatomic, copy) ZFDownLoadDataCallBack callbackOnFinished;
+@property (nonatomic, copy, nullable) ZFDownloadProgressBlock progressBlock;
+@property (nonatomic, copy, nullable) ZFDownLoadDataCallBack callbackOnFinished;
 
 - (void)startDownloadImageWithUrl:(NSString *)url
-                         progress:(ZFDownloadProgressBlock)progress
-                         finished:(ZFDownLoadDataCallBack)finished;
+                         progress:(nullable ZFDownloadProgressBlock)progress
+                         finished:(nullable ZFDownLoadDataCallBack)finished;
 
 @end
 
@@ -58,7 +60,7 @@ typedef void (^ZFImageBlock)(UIImage *image);
 /**
  *  Image downloader
  */
-@property (nonatomic, strong) ZFImageDownloader *imageDownloader;
+@property (nonatomic, strong, nullable) ZFImageDownloader *imageDownloader;
 
 /**
  *	Specify the URL to download images fails, the number of retries, the default is 2
@@ -106,7 +108,7 @@ typedef void (^ZFImageBlock)(UIImage *image);
  */
 - (void)setImageWithURLString:(NSString *)url
                   placeholder:(UIImage *)placeholderImage
-                   completion:(void (^)(UIImage *image))completion;
+                   completion:(nullable void (^)(UIImage *image))completion;
 
 /**
  * Set the imageView `image` with an `url`, placeholder.
@@ -123,5 +125,7 @@ typedef void (^ZFImageBlock)(UIImage *image);
  */
 - (void)setImageWithURLString:(NSString *)url
          placeholderImageName:(NSString *)placeholderImageName
-                   completion:(void (^)(UIImage *image))completion;
+                   completion:(nullable void (^)(UIImage *image))completion;
 @end
+
+NS_ASSUME_NONNULL_END

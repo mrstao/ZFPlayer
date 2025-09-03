@@ -25,6 +25,8 @@
 #import <UIKit/UIKit.h>
 #import "ZFPlayerConst.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface ZFPlayerView : UIView
 
 /// player content view.
@@ -40,3 +42,5 @@
 @property (nonatomic, strong, readonly) UIImageView *coverImageView;
 
 @end
+
+NS_ASSUME_NONNULL_END

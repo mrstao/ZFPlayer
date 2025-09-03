@@ -26,6 +26,8 @@
 #import <UIKit/UIKit.h>
 #import "ZFOrientationObserver.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface ZFPersentInteractiveTransition : UIPercentDrivenInteractiveTransition
 
 @property (nonatomic, weak) id<ZFPortraitOrientationDelegate> delagate;
@@ -45,3 +47,5 @@
             containerView:(UIView *)containerView;
 
 @end
+
+NS_ASSUME_NONNULL_END

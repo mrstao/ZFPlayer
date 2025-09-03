@@ -30,6 +30,8 @@
 #import "ZFPlayerMediaPlayback.h"
 #endif
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface ZFAVPlayerManager : NSObject <ZFPlayerMediaPlayback>
 
 @property (nonatomic, strong, readonly) AVURLAsset *asset;
@@ -42,3 +44,5 @@
 @property (nonatomic, strong, readonly) AVPlayerLayer *avPlayerLayer;
 
 @end
+
+NS_ASSUME_NONNULL_END

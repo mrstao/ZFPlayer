@@ -8,6 +8,8 @@
 #import <UIKit/UIKit.h>
 #import "ZFLoadingView.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface ZFSpeedLoadingView : UIView
 
 @property (nonatomic, strong) ZFLoadingView *loadingView;
@@ -25,3 +27,5 @@
 - (void)stopAnimating;
 
 @end
+
+NS_ASSUME_NONNULL_END

@@ -27,6 +27,8 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface ZFPlayerLogManager : NSObject
 
 // Set the log output status.
@@ -42,3 +44,5 @@
 + (void)logWithFunction:(const char *)function lineNumber:(int)lineNumber formatString:(NSString *)formatString;
 
 @end
+
+NS_ASSUME_NONNULL_END

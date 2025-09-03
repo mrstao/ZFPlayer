@@ -32,6 +32,8 @@
 #if __has_include(<IJKMediaFramework/IJKMediaFramework.h>)
 #import <IJKMediaFramework/IJKMediaFramework.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface ZFIJKPlayerManager : NSObject <ZFPlayerMediaPlayback>
 
 @property (nonatomic, strong, readonly) IJKFFMoviePlayerController *player;
@@ -41,5 +43,7 @@
 @property (nonatomic, assign) NSTimeInterval timeRefreshInterval;
 
 @end
+
+NS_ASSUME_NONNULL_END
 
 #endif

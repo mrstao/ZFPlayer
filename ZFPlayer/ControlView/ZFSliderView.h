@@ -24,6 +24,8 @@
 
 #import <UIKit/UIKit.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 @protocol ZFSliderViewDelegate <NSObject>
 
 @optional
@@ -116,3 +118,5 @@
 - (void)setThumbImage:(UIImage *)image forState:(UIControlState)state;
 
 @end
+
+NS_ASSUME_NONNULL_END

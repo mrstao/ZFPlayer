@@ -25,6 +25,8 @@
 #import <UIKit/UIKit.h>
 #import "ZFOrientationObserver.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 typedef NS_ENUM(NSUInteger, ZFPresentTransitionType) {
     ZFPresentTransitionTypePresent,
     ZFPresentTransitionTypeDismiss,
@@ -47,3 +49,5 @@ typedef NS_ENUM(NSUInteger, ZFPresentTransitionType) {
                        containerView:(UIView *)containerView;
 
 @end
+
+NS_ASSUME_NONNULL_END

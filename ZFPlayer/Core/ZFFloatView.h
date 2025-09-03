@@ -24,6 +24,8 @@
 
 #import <UIKit/UIKit.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface ZFFloatView : UIView
 
 /// The parent View
@@ -33,3 +35,5 @@
 @property(nonatomic, assign) UIEdgeInsets safeInsets;
 
 @end
+
+NS_ASSUME_NONNULL_END

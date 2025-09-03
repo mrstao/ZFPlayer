@@ -54,7 +54,7 @@
 - (void)safelyAddObserver:(NSObject *)observer
                forKeyPath:(NSString *)keyPath
                   options:(NSKeyValueObservingOptions)options
-                  context:(void *)context {
+                  context:(nullable void *)context {
     if (_target == nil) return;
     
     NSInteger indexEntry = [self indexEntryOfObserver:observer forKeyPath:keyPath];

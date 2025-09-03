@@ -33,6 +33,8 @@
 #import "ZFPlayerMediaControl.h"
 #endif
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface ZFPlayerControlView : UIView <ZFPlayerMediaControl>
 
 /// 竖屏控制层的View
@@ -152,3 +154,5 @@
 - (void)resetControlView;
 
 @end
+
+NS_ASSUME_NONNULL_END

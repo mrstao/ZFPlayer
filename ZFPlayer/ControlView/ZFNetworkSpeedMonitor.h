@@ -24,6 +24,8 @@
 
 #import <Foundation/Foundation.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 extern NSString *const ZFDownloadNetworkSpeedNotificationKey;
 extern NSString *const ZFUploadNetworkSpeedNotificationKey;
 extern NSString *const ZFNetworkSpeedNotificationKey;
@@ -37,3 +39,5 @@ extern NSString *const ZFNetworkSpeedNotificationKey;
 - (void)stopNetworkSpeedMonitor;
 
 @end
+
+NS_ASSUME_NONNULL_END

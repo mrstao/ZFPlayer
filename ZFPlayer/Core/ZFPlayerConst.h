@@ -22,6 +22,11 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
+#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+
+NS_ASSUME_NONNULL_BEGIN
+
 typedef NS_ENUM(NSUInteger, ZFPlayerPlaybackState) {
     ZFPlayerPlayStateUnknown,
     ZFPlayerPlayStatePlaying,
@@ -128,3 +133,4 @@ typedef NS_ENUM(NSInteger, ZFPlayerScalingMode) {
 #endif
 #endif
 
+NS_ASSUME_NONNULL_END

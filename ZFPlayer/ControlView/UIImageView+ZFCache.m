@@ -250,7 +250,7 @@
     objc_setAssociatedObject(self, @selector(completion), completion, OBJC_ASSOCIATION_COPY_NONATOMIC);
 }
 
-- (void)setImageDownloader:(ZFImageDownloader *)imageDownloader {
+- (void)setImageDownloader:(nullable ZFImageDownloader *)imageDownloader {
     objc_setAssociatedObject(self, @selector(imageDownloader), imageDownloader, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
@@ -275,7 +275,7 @@
 
 - (void)setImageWithURLString:(NSString *)url
          placeholderImageName:(NSString *)placeholderImage
-                   completion:(void (^)(UIImage *image))completion {
+                   completion:(nullable void (^)(UIImage *image))completion {
     NSString *path = [[NSBundle mainBundle] pathForResource:placeholderImage ofType:nil];
     UIImage *image = [UIImage imageWithContentsOfFile:path];
     if (image == nil) { image = [UIImage imageNamed:placeholderImage]; }
@@ -285,7 +285,7 @@
 
 - (void)setImageWithURLString:(NSString *)url
                   placeholder:(UIImage *)placeholderImageName
-                   completion:(void (^)(UIImage *image))completion {
+                   completion:(nullable void (^)(UIImage *image))completion {
     [self.layer removeAllAnimations];
     self.completion = completion;
     
