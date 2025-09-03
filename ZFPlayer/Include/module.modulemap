@@ -1,4 +1,0 @@
-module ZFPlayer {
-    umbrella header "ZFPlayer.h"
-    export *
-}

@@ -15,12 +15,12 @@ let package = Package(
     targets: [
         .target(
             name: "ZFPlayer",
-            path: "ZFPlayer/Classes",
-            sources: ["Core", "ControlView", "AVPlayer", "ijkplayer"],
+            path: "ZFPlayer",
+            exclude: ["ijkplayer"],
             resources: [
-                .process("ControlView/ZFPlayer.bundle") // bundle 资源必须写在 publicHeadersPath 前
+                .process("ZFPlayer.bundle")
             ],
-            publicHeadersPath: "../ZFPlayer/Include", // umbrella header + modulemap
+            publicHeadersPath: "include",
             cSettings: [
                 .headerSearchPath(".")
             ]
