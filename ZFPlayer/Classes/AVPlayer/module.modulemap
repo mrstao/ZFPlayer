@@ -1,0 +1,5 @@
+module ZFPlayerAVPlayer {
+    umbrella header "ZFAVPlayerManager.h"
+    
+    export *
+}

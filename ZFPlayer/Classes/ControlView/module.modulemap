@@ -1,0 +1,5 @@
+module ZFPlayerControlView {
+    umbrella header "ZFPlayerControlView.h"
+    
+    export *
+}
