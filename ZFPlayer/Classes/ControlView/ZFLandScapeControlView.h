@@ -24,7 +24,9 @@
 
 #import <UIKit/UIKit.h>
 #import "ZFSliderView.h"
-#if __has_include(<ZFPlayer/ZFPlayerController.h>)
+#if __has_feature(modules)
+@import ZFPlayerCore;
+#elif __has_include(<ZFPlayer/ZFPlayerController.h>)
 #import <ZFPlayer/ZFPlayerController.h>
 #else
 #import "ZFPlayerController.h"

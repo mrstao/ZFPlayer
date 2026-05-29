@@ -24,7 +24,9 @@
 
 #import <Foundation/Foundation.h>
 #import <AVFoundation/AVFoundation.h>
-#if __has_include(<ZFPlayer/ZFPlayerMediaPlayback.h>)
+#if __has_feature(modules)
+@import ZFPlayerCore;
+#elif __has_include(<ZFPlayer/ZFPlayerMediaPlayback.h>)
 #import <ZFPlayer/ZFPlayerMediaPlayback.h>
 #else
 #import "ZFPlayerMediaPlayback.h"

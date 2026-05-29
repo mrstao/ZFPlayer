@@ -27,7 +27,9 @@
 #import "ZFLandScapeControlView.h"
 #import "ZFSpeedLoadingView.h"
 #import "ZFSmallFloatControlView.h"
-#if __has_include(<ZFPlayer/ZFPlayerMediaControl.h>)
+#if __has_feature(modules)
+@import ZFPlayerCore;
+#elif __has_include(<ZFPlayer/ZFPlayerMediaControl.h>)
 #import <ZFPlayer/ZFPlayerMediaControl.h>
 #else
 #import "ZFPlayerMediaControl.h"

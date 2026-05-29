@@ -1,5 +1,7 @@
+extern module ZFPlayerCore "../Core/module.modulemap"
+
 module ZFPlayerControlView {
-    umbrella header "ZFPlayerControlView.h"
+    umbrella "."
     
     export *
 }

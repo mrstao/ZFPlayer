@@ -1,5 +1,5 @@
 module ZFPlayerCore {
-    umbrella header "ZFPlayer.h"
+    umbrella "."
     
     export *
 }
